@@ -11,7 +11,10 @@ export class App {
   protected readonly cref = 'CREF 146028-G/SP';
 
   /** Atualize com o número real (DDI + DDD + número, só dígitos) */
-  protected readonly whatsappUrl = 'https://wa.me/5511999999999';
+  private readonly whatsappPhone = '5511999999999';
+  protected readonly whatsappUrl =
+    `https://wa.me/${this.whatsappPhone}?text=` +
+    encodeURIComponent('Olá! Gostaria de agendar uma avaliação e saber mais sobre o acompanhamento.');
   /** Atualize com o @ do Instagram */
   protected readonly instagramUrl = 'https://instagram.com/gilbertosantiagopersonal';
 
